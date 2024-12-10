@@ -1,109 +1,75 @@
-" 编码
+call plug#begin('~/.vim/plug')
+" Python 语法高亮
+Plug 'vim-python/python-syntax'
+" 自动补全插件
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" 代码格式化
+Plug 'psf/black', { 'branch': 'stable' }
+" 代码片段
+"Plug 'honza/vim-snippets'
+call plug#end()
+
+inoremap <expr> <Tab> pumvisible() ? coc#pum#confirm() : "\<Tab>"
+
+" 基础设置
+set nocompatible
 set encoding=utf-8
+set termguicolors
+colorscheme desert
 
-set nocp
-
-" 开启鼠标支持
-set mouse=a
-
-" vim记忆行数
-set history=500
-
-" 启用文件类型插件
-filetype plugin indent on
-
-" 光标移动时上下文行数
-set so=7
-
-" 设置补全
-set wildmenu
-set wildmode=list:longest,full
-
-" 始终显示当前位置
+" 显示设置
+set number
+" set relativenumber
+set cursorline
+set showmode
+set showcmd
+set showmatch
 set ruler
+set title
+set lazyredraw
+set nowrap
+set splitbelow
 
-" 命令栏高度
-set cmdheight=1
-
-" 缓冲区隐藏
-set hid
-
-" 搜索设置 忽略大小写 智能大小写 高亮搜索 增量搜索
+" 搜索设置
 set ignorecase
 set smartcase
-set hlsearch
 set incsearch
+set hlsearch
 
-" 正则表达式
-set magic
-
-" 匹配括号
-set showmatch
-
-" 语法高亮
-syntax enable
-
-" 背景颜色
-set background=dark
-
-" 关闭备份
-set nobackup
-set nowb
-set noswapfile
-
-" 空格替代tab
-set expandtab
-
-" 智能tab
-set smarttab
-
-" 1tab = 4空格
-set shiftwidth=4
+" 缩进设置
 set tabstop=4
-
-" 自动缩进 智能缩进 换行
+set softtabstop=4
+set shiftwidth=4
+set expandtab
 set autoindent
 set smartindent
-set wrap
 
-" 显示 行号 相对行号
-set number
-set relativenumber
+" 文件类型和语法
+syntax on
+filetype on
+filetype plugin on
+filetype indent on
 
-" 状态栏
-set laststatus=2   
+" 补全与菜单
+set wildmenu
+set wildmode=longest:list,full
 
-" 显示输入的命令
-set showcmd   
+" 剪贴板
+set clipboard=unnamedplus
 
-" 突出显示当前行
-set cursorline          
+" 文件操作
+set nobackup
+set noswapfile
+set undofile
+set undodir=~/.vim/undodir
 
-" 显示最后一行
-set display+=lastline
+" 历史与行为
+set history=500
+set autoread
+set hidden
 
-" 性能优化 放置频繁重绘 语法高亮扫描行数 禁用光标线
-set lazyredraw
-set synmaxcol=200
-set nocursorline nocursorcolumn
+" 自动滚动
+set scrolloff=10
 
-" 自动补全
-inoremap ( ()<Esc>i
-inoremap [ []<Esc>i
-inoremap { {}<Esc>i
-inoremap ' ''<Esc>i
-inoremap " ""<Esc>i
-
-" 常驻文件浏览器
-let g:netrw_winsize = 25      " 设置 netrw 窗口大小为屏幕宽度的 25%
-let g:netrw_browse_split = 4  " 在新标签页中打开文件
-let g:netrw_altv = 1          " 在新标签页中打开文件时光标定位在新标签页
-let g:netrw_liststyle = 3     " 设置 netrw 为树形视图
-augroup ProjectDrawer
-  autocmd!
-  autocmd VimEnter * :Vexplore
-augroup END
-
-call plug#begin('~/.vim/plug/')
-Plug 'tpope/vim-senesible'
-call plug#end()
+" 自动切换目录
+" set autochdir
