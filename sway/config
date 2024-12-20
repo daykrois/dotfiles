@@ -1,5 +1,5 @@
-exec fcitx5 &
-exec waybar
+#default_border none
+for_window [class=".*"] border pixel 1
 # Default config for sway
 #
 # Copy this to ~/.config/sway/config and edit it to your liking.
@@ -54,6 +54,13 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 #       natural_scroll enabled
 #       middle_emulation enabled
 #   }
+
+
+input "5426:138:Razer_Razer_Viper_Mini" {
+    accel_profile "flat"
+}
+
+
 #
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
@@ -213,18 +220,18 @@ bindsym $mod+r mode "resize"
 # Status Bar:
 #
 # Read `man 5 sway-bar` for more information about this section.
-#bar {
-#    position top
-#
-#    # When the status_command prints a new line to stdout, swaybar updates.
-#    # The default just shows the current date and time.
-#    status_command while date +'%Y-%m-%d %X'; do sleep 1; done
-#
-#    colors {
-#        statusline #ffffff
-#        background #323232
-#        inactive_workspace #32323200 #32323200 #5c5c5c
-#    }
-#}
+bar {
+    position top
+
+    # When the status_command prints a new line to stdout, swaybar updates.
+    # The default just shows the current date and time.
+    status_command while date +'%Y-%m-%d %X'; do sleep 1; done
+
+    colors {
+        statusline #ffffff
+        background #323232
+        inactive_workspace #32323200 #32323200 #5c5c5c
+    }
+}
 
 include /etc/sway/config.d/*
