@@ -1,3 +1,5 @@
+set $lang "zh_CN.UTF-8"
+
 #default_border none
 for_window [class=".*"] border pixel 1
 # Default config for sway
@@ -76,7 +78,7 @@ input "5426:138:Razer_Razer_Viper_Mini" {
     bindsym $mod+Shift+q kill
 
     # Start your launcher
-    bindsym $mod+d exec $menu
+    bindsym $mod+d exec "env LANG=$lang $menu"
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
