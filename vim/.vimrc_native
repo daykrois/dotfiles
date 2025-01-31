@@ -1,0 +1,53 @@
+" 基本设置
+set number
+syntax on
+set clipboard=unnamedplus
+set termguicolors
+
+" 自动补全
+set wildmenu
+set wildmode=list:longest,full
+
+" Tab 和缩进
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set softtabstop=4
+set autoindent
+set smartindent
+
+" 搜索
+set incsearch
+set hlsearch
+set ignorecase
+set smartcase
+set nowrapscan
+
+" 界面
+set cursorline
+set laststatus=2
+set showmode
+set showcmd
+
+" 文件类型
+filetype plugin on
+filetype indent on
+
+" 编辑
+set backspace=indent,eol,start
+set mouse=a
+
+" 编码
+set encoding=utf-8
+set fileencoding=utf-8
+
+" 颜色主题
+colorscheme habamax
+
+
+" 自动保存和读取
+set autowrite
+set autoread
+
+" 自动滚动
+set scrolloff=10
