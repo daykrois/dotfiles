@@ -10,9 +10,11 @@ global {
 
 subscription {
   # 在下面填入你的订阅链接。
-  nomorewalls:'https://ghfast.top/https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.txt' 
-  automergepublicnodes:'https://ghfast.top/https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/list.txt'
+  # automerge: 'https://fastly.jsdelivr.net/gh/chengaopan/AutoMergePublicNodes@master/list.txt'
+  # airport-free: 'https://cdn.jsdelivr.net/gh/xiaoji235/airport-free/v2ray/clashnodecc.txt'
+  freenode: 'https://raw.githubusercontent.com/xiaoji235/airport-free/refs/heads/main/v2ray/nodefree.txt'
 }
+
 
 # 更多的 DNS 样例见 https://github.com/daeuniverse/dae/blob/main/docs/en/configuration/dns.md
 dns {
@@ -36,6 +38,7 @@ dns {
 group {
   proxy {
     #filter: name(keyword: HK, keyword: SG)
+    filter: !name(keyword: mibei, keyword:yudou)
     policy: min_moving_avg
   }
 }
@@ -55,4 +58,3 @@ routing {
 
   fallback: proxy
 }
-
