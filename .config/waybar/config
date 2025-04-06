@@ -1,0 +1,103 @@
+{
+  "style": "~/.config/waybar/style1.css",
+  "layer": "top",
+  "position": "top",
+  "height": 30,
+  "spacing": 4,
+  "modules-left": ["sway/workspaces", "sway/mode"],
+  "modules-center": ["sway/window"],
+  "modules-right": ["pulseaudio", "network", "cpu", "memory", "battery", "clock", "tray"],
+
+  // 工作区模块 (Sway)
+  "sway/workspaces": {
+    "format": "{name}",
+    "format-icons": {
+      "1": "一",
+      "2": "二",
+      "3": "三",
+      "4": "四",
+      "5": "五",
+      "urgent": "⚠",
+      "focused": "➤",
+      "default": "○"
+    },
+    "disable-scroll": true
+  },
+
+  // 当前窗口标题
+  "sway/window": {
+    "format": "{}",
+    "max-length": 50,
+    "tooltip": false
+  },
+
+  // 时钟
+  "clock": {
+    "format": " {:%H:%M}",
+    "format-alt": " {:%Y-%m-%d %a}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "interval": 10
+  },
+
+  // CPU 使用率
+  "cpu": {
+    "format": " {usage}%",
+    "interval": 5,
+    "states": {
+      "warning": 70,
+      "critical": 90
+    }
+  },
+
+  // 内存占用
+  "memory": {
+    "format": " {percentage}%",
+    "interval": 5,
+    "states": {
+      "warning": 70,
+      "critical": 90
+    }
+  },
+
+  // 网络状态
+  "network": {
+    "format-wifi": " {essid} ({signalStrength}%)",
+    "format-ethernet": " {ipaddr}",
+    "format-disconnected": "⚠ 无网络",
+    "interval": 5,
+    "tooltip-format": "{ifname}: {ipaddr}/{cidr}"
+  },
+
+  // 音量控制
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-bluetooth": "{icon} {volume}%",
+    "format-muted": "🔇",
+    "format-icons": {
+      "headphone": "",
+      "default": ["🔈", "🔉", "🔊"]
+    },
+    "scroll-step": 5,
+    "on-click": "pavucontrol"
+  },
+
+  // 电池状态
+  "battery": {
+    "format": "{icon} {capacity}%",
+    "format-alt": "{icon} {time}",
+    "format-charging": " {capacity}%",
+    "format-full": "🔋 100%",
+    "format-icons": ["", "", "", "", ""],
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "interval": 10
+  },
+
+  // 系统托盘
+  "tray": {
+    "icon-size": 18,
+    "spacing": 8
+  }
+}

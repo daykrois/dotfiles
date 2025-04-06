@@ -11,8 +11,7 @@ global {
 subscription {
   # 在下面填入你的订阅链接。
   # automerge: 'https://fastly.jsdelivr.net/gh/chengaopan/AutoMergePublicNodes@master/list.txt'
-  # airport-free: 'https://cdn.jsdelivr.net/gh/xiaoji235/airport-free/v2ray/clashnodecc.txt'
-  freenode: 'https://raw.githubusercontent.com/xiaoji235/airport-free/refs/heads/main/v2ray/nodefree.txt'
+  airport-free: 'https://gh.b52m.cn/https://github.com/xiaoji235/airport-free/blob/main/v2ray.txt'
 }
 
 
