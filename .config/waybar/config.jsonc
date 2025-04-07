@@ -1,0 +1,74 @@
+{
+    "name": "bar1",
+    "spacing": 10,
+    "modules-left": [
+        "sway/workspaces",
+        "mpd",
+        "pulseaudio",
+    ],
+    "modules-center": [
+        "clock",
+        "custom/weather"
+        // "wireplumber"
+    ],
+    "modules-right": [
+        "temperature",
+        // "pulseaudio/slider",
+        // "load",
+        "cpu",
+        "battery",
+        "tray",
+    ],
+    "custom/weather": {
+        "exec": "bash ~/.config/waybar/script/weather.sh",
+        "interval": 600
+    },
+    "custom/net_speed": {
+        "exec": "~/.config/waybar/script/net_speed.sh",
+        "interval": 1,
+        "format": "{}"
+    },
+    "mpd": {
+        "format": "󰎇 {artist}-{title}",
+        "on-click": "mpc toggle",
+        "interval": 10
+    },
+    "clock": {
+        "format": " {:%Y-%m-%d %H:%M:%S}",
+        "interval": 1
+    },
+    "sway/workspaces": {
+        "format": "{name}"
+    },
+    "temperature": {
+        "format": " {}°C",
+        "interval": 20
+    },
+    "cpu": {
+        "format": " {usage}%",
+        "interval": 10
+    },
+    "battery": {
+        "format-full": "󱊣 {capacity}%",
+        "interval": 60
+    },
+    "pulseaudio": {
+        "format": " {volume}%",
+        "on-click": "pavucontrol"
+    },
+    "pulseaudio/slider": {
+        "min": 0,
+        "max": 100,
+        "orientation": "horizontal"
+    },
+    "tray": {
+        "spacing": 10
+    },
+    "wireplumber": {
+        "format": "{volume}%",
+        "format-muted": "",
+        "on-click": "helvum",
+        "max-volume": 150,
+        "scroll-step": 0.2
+    },
+}

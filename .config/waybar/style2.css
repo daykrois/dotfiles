@@ -1,0 +1,144 @@
+* {
+    /* 全局重置 */
+    border: none;
+    border-radius: 0;
+    font-family: "FiraCode Nerd Font", "JetBrains Mono", "Noto Sans", sans-serif;
+    font-size: 13px;
+    min-height: 0;
+}
+
+window#waybar {
+    /* 全局外观 */
+    background-color: rgba(40, 42, 54, 0.9); /* 半透明背景 */
+    color: #f8f8f2;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+}
+
+/* 工作区模块 */
+#workspaces button {
+    padding: 0 8px;
+    background-color: transparent;
+    color: #f8f8f2;
+    border-bottom: 3px solid transparent;
+}
+
+#workspaces button.focused {
+    border-bottom: 3px solid #bd93f9;
+}
+
+#workspaces button.urgent {
+    background-color: #ff5555;
+}
+
+/* 系统托盘 */
+#tray {
+    padding: 0 10px;
+    margin: 0 4px;
+    background-color: rgba(68, 71, 90, 0.7);
+    border-radius: 4px;
+}
+
+/* 时钟样式 */
+#clock {
+    padding: 0 12px;
+    font-weight: bold;
+    background-color: rgba(68, 71, 90, 0.7);
+    border-radius: 4px;
+}
+
+/* CPU/内存/温度等系统指标 */
+#cpu,
+#memory,
+#temperature {
+    padding: 0 8px;
+    margin: 0 2px;
+    background-color: rgba(68, 71, 90, 0.7);
+    border-radius: 4px;
+}
+
+#cpu {
+    color: #8be9fd;
+}
+
+#memory {
+    color: #50fa7b;
+}
+
+#temperature {
+    color: #ffb86c;
+}
+
+/* 网络状态 */
+#network {
+    padding: 0 10px;
+    color: #f1fa8c;
+}
+
+#network.disconnected {
+    color: #ff5555;
+}
+
+/* 电池状态 */
+#battery {
+    padding: 0 10px;
+    color: #50fa7b;
+}
+
+#battery.charging {
+    color: #f1fa8c;
+}
+
+#battery.warning:not(.charging) {
+    color: #ffb86c;
+}
+
+#battery.critical:not(.charging) {
+    color: #ff5555;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+/* 音量控制 */
+#pulseaudio {
+    padding: 0 10px;
+    color: #bd93f9;
+}
+
+#pulseaudio.muted {
+    color: #ff5555;
+}
+
+/* 自定义退出按钮 */
+#custom-power {
+    padding: 0 12px;
+    margin-right: 4px;
+    background-color: #ff5555;
+    border-radius: 4px;
+    color: #282a36;
+}
+
+/* 动画效果 */
+@keyframes blink {
+    to {
+        background-color: #ff5555;
+        color: #f8f8f2;
+    }
+}
+
+/* 窗口标题模块 */
+#window {
+    padding: 0 12px;
+    font-weight: bold;
+    color: #bd93f9;
+}
+
+/* 任务栏工具提示 */
+tooltip {
+    background-color: #282a36;
+    border: 1px solid #44475a;
+    border-radius: 4px;
+}
