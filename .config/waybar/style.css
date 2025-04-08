@@ -25,6 +25,7 @@ box.module button {
 
 
 #workspaces button.focused {
+    outline: blueviolet solid 5px;
     border-bottom: blueviolet solid 3px;
     border-radius: 0;
 }
