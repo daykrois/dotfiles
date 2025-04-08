@@ -19,14 +19,14 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term kitty
+set $term foot
 # Your preferred application launcher
 set $menu wofi --show drun
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+output * bg ~/code/img/wallpaper/goku.jpeg fill
 #
 # Example configuration:
 #
@@ -57,6 +57,10 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 #       natural_scroll enabled
 #       middle_emulation enabled
 #   }
+
+input "type:touchpad" {
+    tap enable
+}
 
 
 input "5426:138:Razer_Razer_Viper_Mini" {
@@ -223,18 +227,21 @@ bindsym $mod+r mode "resize"
 # Status Bar:
 #
 # Read `man 5 sway-bar` for more information about this section.
-bar {
-    position top
+
+
+
+#bar {
+#    position top
 
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %X'; do sleep 1; done
+    #status_command while date +'%Y-%m-%d %X'; do sleep 1; done
 
-    colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
-    }
-}
+   # colors {
+   #     statusline #ffffff
+   #     background #323232
+  #      inactive_workspace #32323200 #32323200 #5c5c5c
+ #   }
+#}
 
 include /etc/sway/config.d/*
