@@ -26,7 +26,7 @@ set $menu wofi --show drun
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg ~/code/img/wallpaper/goku.jpeg fill
+output * bg ~/.config/sway/wallpaper/goku.jpeg fill
 #
 # Example configuration:
 #
