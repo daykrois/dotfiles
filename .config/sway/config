@@ -18,6 +18,18 @@ bar status {
 }
 
 
+# ==== 截图快捷键设置 ====
+
+# 全屏截图：Print 键
+bindsym Print exec grim ~/Pictures/screenshot-$(date +'%Y%m%d-%H%M%S').png
+
+# 区域截图：Shift + Print
+bindsym Shift+Print exec grim -g \"\$(slurp)\" ~/Pictures/screenshot-$(date +'%Y%m%d-%H%M%S').png
+
+# 截图并复制到剪贴板：Ctrl + Print
+bindsym Ctrl+Print exec grim - | wl-copy
+
+
 
 # Default config for sway
 #
@@ -226,7 +238,7 @@ bindsym $mod+r mode "resize"
     bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
     bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
     # Special key to take a screenshot with grim
-    bindsym Print exec grim
+    # bindsym Print exec grim
 
 #
 # Status Bar:
