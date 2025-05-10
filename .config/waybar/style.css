@@ -33,7 +33,7 @@ window#waybar {
 #workspaces {
   background-color: rgba(43, 48, 59, 0.85);
   border-radius: 10px;
-  margin: 2px 4px;
+  margin: 2px;
   padding: 0 10px;
 }
 
