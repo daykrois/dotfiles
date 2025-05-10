@@ -1,47 +1,51 @@
-* {
-    font-family:  'Noto Serif CJK SC', sans-serif;
-    font-size: 20px;
-    font-weight: 400;
-}
-
-
-#window {
-    margin: 0px;
-    border: none;
-    border-color: rgb(129, 126, 127);
-    border-radius: 10px;
-    background-color: #121212;
-    color:  #708879;
+window {
+margin: 0px;
+border: 1px solid #bd93f9;
+background-color: #282a36;
 }
 
 #input {
-    margin: 25px;
-    background-color: #708879;
-    color: black;
-    border-radius: 10px;
-    border: none;
+margin: 5px;
+border: none;
+color: #f8f8f2;
+background-color: #44475a;
+}
+
+#inner-box {
+margin: 5px;
+border: none;
+background-color: #282a36;
+}
+
+#outer-box {
+margin: 5px;
+border: none;
+background-color: #282a36;
 }
 
 #scroll {
-    margin-bottom: 25px;
+margin: 0px;
+border: none;
 }
 
-#entry {
-    margin: 0px 25px;
+#text {
+margin: 5px;
+border: none;
+color: #f8f8f2;
+} 
+
+#entry.activatable #text {
+color: #282a36;
+}
+
+#entry > * {
+color: #f8f8f2;
 }
 
 #entry:selected {
-    background-color: #337789;
-    border-radius: 10px;
-    border: none;
-    outline: none;
+background-color: #44475a;
 }
 
-#entry > box {
-    margin-left: 15px;
+#entry:selected #text {
+font-weight: bold;
 }
-
-#entry image {
-    padding-right: 10px;
-}
-
