@@ -1,3 +1,7 @@
+if [[ "$(tty)" == /dev/tty* ]]; then
+  typeset -g POWERLEVEL9K_MODE=ascii
+  typeset -g POWERLEVEL9K_VISUAL_IDENTIFIER_EXPANSION=
+fi
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -5,6 +9,8 @@
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
+
+
 
 
 ### Added by Zinit's installer
@@ -60,5 +66,6 @@ setopt hist_verify
 setopt share_history
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+#[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
 
