@@ -24,11 +24,10 @@ bar status {
 bindsym Print exec grim ~/Pictures/screenshot-$(date +'%Y%m%d-%H%M%S').png
 
 # 区域截图：Shift + Print
-bindsym Shift+Print exec grim -g \"\$(slurp)\" ~/Pictures/screenshot-$(date +'%Y%m%d-%H%M%S').png
+bindsym Shift+Print exec grim -g "$(slurp)" ~/Pictures/screenshot-$(date +'%Y%m%d-%H%M%S').png
 
-# 截图并复制到剪贴板：Ctrl + Print
-bindsym Ctrl+Print exec grim - | wl-copy
-
+# 区域截图并复制到剪贴板：Ctrl + Print
+bindsym Ctrl+print exec grim -g "$(slurp)" - | wl-copy
 
 
 # Default config for sway
