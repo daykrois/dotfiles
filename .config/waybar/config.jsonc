@@ -1,5 +1,6 @@
 {
   "layer": "top",
+  "spacing": 4,
   "modules-left": [
     "sway/workspaces",
     "pulseaudio"
@@ -35,5 +36,8 @@
     "format-muted": "󰖁",
     "tooltip": false,
     "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+  },
+  "tray":{
+    "spacing":10
   }
 }
