@@ -1,6 +1,7 @@
 {
   "layer": "top",
-  "spacing": 4,
+  "position":"top",
+  "spacing": 0,
   "modules-left": [
     "sway/workspaces",
     "pulseaudio"
@@ -16,28 +17,30 @@
   ],
   "clock": {
     "format": " {:%Y-%m-%d %H:%M}",
-    "tooltip": false
   },
   "cpu": {
     "interval": 10,
-    "format": " {usage}%"
+    "format": "󰻠 {usage}%",
+    "tooltip": false,
   },
   "memory": {
     "interval": 10,
-    "format": " {percentage}%"
+    "tooltip": false,
+    "format": " {percentage}%",
   },
   "temperature": {
     "interval": 10,
-    "format": " {temperatureC}°C"
+    "tooltip": false,
+    "format": " {temperatureC}°C",
   },
   "pulseaudio": {
-    "format": "󰕾 {volume}%",
+    "format": " {volume}%",
     "on-click": "pavucontrol",
     "format-muted": "󰖁",
     "tooltip": false,
     "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
   },
   "tray":{
-    "spacing":10
+    "spacing":4
   }
 }
