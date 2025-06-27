@@ -3,7 +3,7 @@
   "position":"top",
   "spacing": 0,
   "modules-left": [
-    "sway/workspaces",
+    "hyprland/workspaces",
     "pulseaudio"
   ],
   "modules-center": [
