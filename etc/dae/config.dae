@@ -11,7 +11,9 @@ global {
 subscription {
   # 在下面填入你的订阅链接。
   # automerge: 'https://fastly.jsdelivr.net/gh/chengaopan/AutoMergePublicNodes@master/list.txt'
-  airport-free: 'https://gh.b52m.cn/https://github.com/xiaoji235/airport-free/blob/main/v2ray.txt'
+  #airport-free: 'https://gh.b52m.cn/https://github.com/xiaoji235/airport-free/blob/main/v2ray.txt'
+  telegram: 'https://upld.zone.id/uploads/q9iq9e5iq/jsnzkpg.txt'
+
 }
 
 
