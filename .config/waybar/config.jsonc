@@ -1,9 +1,8 @@
 {
-  "layer": "top",
   "position":"top",
   "spacing": 0,
   "modules-left": [
-    "hyprland/workspaces",
+    "sway/workspaces",
     "pulseaudio"
   ],
   "modules-center": [
@@ -26,7 +25,7 @@
   "memory": {
     "interval": 10,
     "tooltip": false,
-    "format": " {percentage}%",
+    "format": " {percentage}%",
   },
   "temperature": {
     "interval": 10,
