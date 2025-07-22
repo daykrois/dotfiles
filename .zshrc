@@ -11,4 +11,3 @@ autoload -Uz compinit
 compinit
 
 
-export ELECTRON_OZONE_PLATFORM_HINT=wayland
