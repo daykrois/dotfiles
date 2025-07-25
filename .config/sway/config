@@ -1,4 +1,6 @@
-output DP-1 scale 1.25 scale_filter smart
+# output DP-1 scale 1.25 scale_filter smart
+
+output DP-1 scale 1.00
 output * bg ~/.config/sway/wallpaper/goku.jpeg fill
 for_window [class=".*"] border pixel 1
 
@@ -48,7 +50,7 @@ set $right l
 set $term foot
 # Your preferred application launcher
 #set $menu rofi -show drun
-set $menu rofi -show drun -run-command "uwsm app -- {cmd}"
+set $menu rofi -show drun -run-command "uwsm-app -- {cmd}"
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
