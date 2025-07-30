@@ -1,7 +1,7 @@
 # output DP-1 scale 1.25 scale_filter smart
 
 # output DP-1 mode 1920x1080 scale 1.00
-
+exec_always /usr/bin/lxqt-policykit-agent
 output DP-1 scale 1.00 scale_filter smart
 output * bg ~/.config/sway/wallpaper/goku.jpeg fill
 for_window [class=".*"] border pixel 1
